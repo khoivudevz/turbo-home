@@ -2,7 +2,8 @@
 
 import {FC} from 'react'
 import Background from './components/Background/Background'
-import FrameworkCard from '@/components/FrameworkCard/FrameworkCard'
+import Content from './components/Content/Content'
+import Frameworks from './components/Frameworks/Frameworks'
 
 type Props = {
 	lang: any
@@ -11,16 +12,10 @@ type Props = {
 const HomeView: FC<Props> = ({lang}) => {
 	return (
 		<Background>
-			<p className='text-4xl font-bold text-white'>
-				{lang.home.turbo_project_starter}
-			</p>
-			<p className='text-4xl font-bold text-white'>
-				{lang.home.morden_web_development}
-			</p>
-
-			<FrameworkCard title='Title' icon={<div>ICON</div>}>
-				<div>testttt</div>
-			</FrameworkCard>
+			<div className='container mx-auto px-8 py-12 overflow-auto flex flex-col lg:grid lg:grid-cols-2 w-full gap-x-[20px] space-y-[20px] h-full lg:h-fit'>
+				<Content lang={lang} />
+				<Frameworks />
+			</div>
 		</Background>
 	)
 }

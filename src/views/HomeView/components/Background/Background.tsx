@@ -19,7 +19,7 @@ const Background: FC<Props> = ({children}) => {
 					duration: 0.8,
 					ease: 'easeInOut',
 				}}
-				className='relative flex flex-col gap-4 items-center justify-center px-4'
+				className='relative w-full h-full flex items-center'
 			>
 				{children}
 			</motion.div>

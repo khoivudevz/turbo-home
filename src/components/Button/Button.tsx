@@ -1,36 +1,18 @@
 'use client'
 
-import {APP_URL} from '@/configs/app-url.config'
-import useRouter from '@/hooks/useRouter'
-import {useTranslationContext} from '@/translation/translation.context'
-import {getLanguageParam} from '@/utils/language.util'
-import {useSearchParams} from 'next/navigation'
-import {FC} from 'react'
+import {FC, JSX} from 'react'
 
-type Props = {
-	page: string
+type Props = JSX.IntrinsicElements['button'] & {
+	title: string
 }
 
-const Button: FC<Props> = ({page}) => {
-	const {t} = useTranslationContext()
-	const searchParams = useSearchParams()
-	const lang = getLanguageParam(searchParams)
-	const router = useRouter()
-
-	const handleClick = () => {
-		if (page === APP_URL.HOME) {
-			router.push(APP_URL.NEWS, false, lang)
-		} else {
-			router.push(APP_URL.HOME, false, lang)
-		}
-	}
-
+const Button: FC<Props> = ({title, ...props}) => {
 	return (
 		<button
-			onClick={handleClick}
-			className='bg-transparent border-[1px] border-solid border-white text-white px-4 py-2 rounded-md my-[30px] hover:bg-white hover:text-black transition-all duration-300'
+			{...props}
+			className='inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50'
 		>
-			{page === APP_URL.HOME ? t('home.move_to_news') : t('home.move_to_home')}
+			{title}
 		</button>
 	)
 }
