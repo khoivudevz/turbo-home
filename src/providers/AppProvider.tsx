@@ -43,7 +43,7 @@ const AppProvider = ({children, initLanguage}: Props) => {
 		}
 	}, [initLanguage])
 
-	return <>{children}</>
+	return <div className='no-scrollbar'>{children}</div>
 }
 
 export default AppProvider

@@ -11,7 +11,11 @@ const HomePage: FC<Props> = async ({searchParams}) => {
 	const {lang} = await searchParams
 	const locale = await getDictionary(lang)
 
-	return <HomeNewView lang={locale} />
+	return (
+		<>
+			<HomeNewView lang={locale} />
+		</>
+	)
 }
 
 export default HomePage

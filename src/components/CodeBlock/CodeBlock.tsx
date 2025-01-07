@@ -10,7 +10,7 @@ type Props = {
 const CodeBlock: FC<Props> = ({children, className, icon}) => (
 	<pre
 		className={cn(
-			'bg-gray-800 text-gray-300 p-4 rounded-md overflow-x-auto my-4  flex items-center justify-center space-x-2',
+			'bg-gray-800 text-gray-300 p-4 rounded-md overflow-x-auto my-4',
 			className
 		)}
 	>

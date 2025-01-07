@@ -9,7 +9,7 @@ type Props = {
 const FrameworkView = ({data}: Props) => {
 	return (
 		<div className='min-h-screen bg-gray-900 text-gray-100 font-sans'>
-			<div className='container mx-auto px-8 py-12'>
+			<div className='container-x'>
 				<h1 className='text-4xl font-extrabold mb-6 text-blue-400'>
 					{data.title}
 				</h1>
