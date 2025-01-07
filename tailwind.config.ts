@@ -14,6 +14,7 @@ export default {
 			animation: {
 				aurora: 'aurora 60s linear infinite',
 				shimmer: 'shimmer 2s linear infinite',
+				blink: 'blink 1s linear infinite',
 			},
 			keyframes: {
 				aurora: {
@@ -31,6 +32,10 @@ export default {
 					to: {
 						backgroundPosition: '-200% 0',
 					},
+				},
+				blink: {
+					'0%, 100%': {color: 'transparent'},
+					'50%': {color: 'white'},
 				},
 			},
 		},

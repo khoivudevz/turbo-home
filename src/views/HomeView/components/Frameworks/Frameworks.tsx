@@ -6,7 +6,7 @@ import {FC} from 'react'
 
 const Frameworks: FC = () => {
 	return (
-		<div className='lg:grid lg:grid-cols-2 gap-x-[20px] space-y-[20px] lg:space-y-0'>
+		<div className='grid grid-cols-2 gap-[20px] '>
 			{frameworkCardData.map((framework) => (
 				<FrameworkCard
 					key={framework.id}

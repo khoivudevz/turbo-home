@@ -75,6 +75,8 @@ export const frameworkData = [
 └── views/`,
 		envExample: `VITE_ENV=development
 VITE_API_URL=your_api_url`,
+		devCommands: ['bun run dev', 'bun run dev:stg', 'bun run dev:prod'],
+		buildCommands: ['bun run build', 'bun run build:dev', 'bun run build:stg'],
 	},
 	{
 		id: 'nextjs-typescript-tailwind',
@@ -108,5 +110,11 @@ VITE_API_URL=your_api_url`,
   └── views/`,
 		envExample: `NEXT_PUBLIC_ENV=
   NEXT_PUBLIC_USER_API_URL=`,
+		devCommands: ['bun run dev', 'bun run dev:staging', 'bun run dev:prod'],
+		buildCommands: [
+			'bun run build',
+			'bun run build:dev',
+			'bun run build:staging',
+		],
 	},
 ]
