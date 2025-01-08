@@ -5,7 +5,7 @@ import {BsFillLightningChargeFill} from 'react-icons/bs'
 const Command: FC = () => {
 	return (
 		<CodeBlock
-			className='text-base w-fit mx-auto bg-transparent'
+			className='text-base w-fit mx-auto bg-transparent flex items-center justify-center space-x-2'
 			icon={<BsFillLightningChargeFill />}
 		>
 			npx turbo-setup

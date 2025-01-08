@@ -7,7 +7,7 @@
  **/
 
 import {cn} from '@/utils/cn.util'
-import {IconLayoutNavbarCollapse} from '@tabler/icons-react'
+import {IconCategory2} from '@tabler/icons-react'
 import {
 	AnimatePresence,
 	MotionValue,
@@ -24,7 +24,7 @@ export const FloatingDock = ({
 	desktopClassName,
 	mobileClassName,
 }: {
-	items: {title: string; icon: React.ReactNode; href: string}[]
+	items: {title: string; icon: React.ReactNode; href: string; blank?: boolean}[]
 	desktopClassName?: string
 	mobileClassName?: string
 }) => {
@@ -40,7 +40,7 @@ const FloatingDockMobile = ({
 	items,
 	className,
 }: {
-	items: {title: string; icon: React.ReactNode; href: string}[]
+	items: {title: string; icon: React.ReactNode; href: string; blank?: boolean}[]
 	className?: string
 }) => {
 	const [open, setOpen] = useState(false)
@@ -72,6 +72,7 @@ const FloatingDockMobile = ({
 								<Link
 									href={item.href}
 									key={item.title}
+									target={item.blank ? '_blank' : '_self'}
 									className='h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center'
 								>
 									<div className='h-4 w-4'>{item.icon}</div>
@@ -85,7 +86,7 @@ const FloatingDockMobile = ({
 				onClick={() => setOpen(!open)}
 				className='h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-800 flex items-center justify-center'
 			>
-				<IconLayoutNavbarCollapse className='h-5 w-5 text-neutral-500 dark:text-neutral-400' />
+				<IconCategory2 className='h-5 w-5 text-neutral-500 dark:text-neutral-400' />
 			</button>
 		</div>
 	)
@@ -95,7 +96,7 @@ const FloatingDockDesktop = ({
 	items,
 	className,
 }: {
-	items: {title: string; icon: React.ReactNode; href: string}[]
+	items: {title: string; icon: React.ReactNode; href: string; blank?: boolean}[]
 	className?: string
 }) => {
 	const mouseX = useMotionValue(Infinity)
@@ -104,7 +105,7 @@ const FloatingDockDesktop = ({
 			onMouseMove={(e) => mouseX.set(e.pageX)}
 			onMouseLeave={() => mouseX.set(Infinity)}
 			className={cn(
-				'mx-auto hidden md:flex h-16 gap-4 items-end  rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 pb-3',
+				'mx-auto hidden md:flex h-16 w-fit gap-4 items-end rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 pb-3',
 				className
 			)}
 		>
@@ -120,11 +121,13 @@ function IconContainer({
 	title,
 	icon,
 	href,
+	blank,
 }: {
 	mouseX: MotionValue
 	title: string
 	icon: React.ReactNode
 	href: string
+	blank?: boolean
 }) {
 	const ref = useRef<HTMLDivElement>(null)
 
@@ -173,7 +176,7 @@ function IconContainer({
 	const [hovered, setHovered] = useState(false)
 
 	return (
-		<Link href={href}>
+		<Link href={href} target={blank ? '_blank' : '_self'}>
 			<motion.div
 				ref={ref}
 				style={{width, height}}

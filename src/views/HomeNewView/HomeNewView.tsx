@@ -1,7 +1,6 @@
+'use client'
 import {FC} from 'react'
-import Background from './components/Background/Background'
-import Command from './components/Command/Command'
-import HighLightTitle from './components/HighLightTitle/HighLightTitle'
+import FullPage from '@/views/HomeNewView/components/FullPage/FullPage'
 
 type Props = {
 	lang: any
@@ -9,13 +8,9 @@ type Props = {
 
 const HomeNewView: FC<Props> = ({}) => {
 	return (
-		<Background>
-			<div>
-				<HighLightTitle />
-
-				<Command />
-			</div>
-		</Background>
+		<div>
+			<FullPage />
+		</div>
 	)
 }
 
