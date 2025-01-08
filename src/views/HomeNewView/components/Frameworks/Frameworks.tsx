@@ -9,14 +9,14 @@ const Frameworks: FC = () => {
 	return (
 		<div className='h-dvh bg-neutral-950 flex items-center justify-center'>
 			<div className='container-x space-y-[50px]'>
-				<p className='text-2xl text-white'>
-					Select your{' '}
-					<Highlight className='text-black dark:text-white font-extrabold text-2xl'>
+				<p className='text-center font-extrabold text-4xl lg:text-5xl text-white'>
+					Select your <br className='md:hidden' />
+					<Highlight className='text-black dark:text-white'>
 						turbo pack
 					</Highlight>
 					.
 				</p>
-				<div className='grid grid-cols-2 gap-[20px]'>
+				<div className='flex items-center justify-center space-x-[10px]'>
 					{frameworkCardData.map((framework) => (
 						<FrameworkCard
 							key={framework.id}

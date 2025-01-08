@@ -6,6 +6,17 @@ type Props = {
 	params: Promise<{framework: string}>
 }
 
+export const generateMetadata = async ({params}: Props) => {
+	const framework = (await params).framework
+	const data = frameworkData.find((f) => f.id === framework)
+	if (!data) return <div>Framework not found</div>
+
+	return {
+		title: data.title,
+		description: data.description,
+	}
+}
+
 const FrameworkPage: FC<Props> = async ({params}) => {
 	const framework = (await params).framework
 	const data = frameworkData.find((f) => f.id === framework)
