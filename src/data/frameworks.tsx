@@ -96,7 +96,8 @@ VITE_API_URL=your_api_url`,
 		],
 		prerequisites: ['Node.js 18+', 'Bun'],
 		git: 'https://github.com/khoivudevz/turbo-setup-nextjs-ts-tailwind',
-		structure: `src/
+		structure: `messages/ # Translation message files
+	src/
   ├── app/
   ├── components/
   ├── configs/
