@@ -48,7 +48,7 @@ const FrameworkView = ({data}: Props) => {
 					<h2 className='text-3xl font-bold text-blue-300 mb-4'>
 						📦 Installation
 					</h2>
-					<CodeBlock>git clone {data.git}</CodeBlock>
+					<CodeBlock>git clone --depth=1 {data.git}</CodeBlock>
 					<CodeBlock>bun install</CodeBlock>
 				</section>
 
