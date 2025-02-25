@@ -4,24 +4,19 @@ import React from 'react'
 import {AnimatePresence, motion} from 'framer-motion'
 import CanvasRevealEffect from '../ui/CanvasRevealEffect'
 import Button from '../Button/Button'
-import useRouter from '@/hooks/useRouter'
-import {getLanguageParam} from '@/utils/language.util'
-import {useSearchParams} from 'next/navigation'
+import {useRouter} from 'next/navigation'
 
 const FrameworkCard = ({
 	title,
 	icon,
 	children,
-	id,
+	path,
 }: {
 	title: string
 	icon: React.ReactNode
-	id: string
+	path: string
 	children?: React.ReactNode
 }) => {
-	const searchParams = useSearchParams()
-
-	const lang = getLanguageParam(searchParams)
 	const navigate = useRouter()
 	const [hovered, setHovered] = React.useState(false)
 	return (
@@ -59,7 +54,7 @@ const FrameworkCard = ({
 					<Button
 						title='View more'
 						onClick={() => {
-							navigate.push(`/${id}`, false, lang)
+							navigate.push(path)
 						}}
 						className='hidden group-hover/canvas-card:block'
 					/>

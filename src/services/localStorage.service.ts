@@ -1,6 +1,4 @@
-export const LOCAL_STORAGE_KEY = {
-	LANG: 'LANG',
-}
+export const LOCAL_STORAGE_KEY = {}
 
 export const localStorageServices = {
 	setLocalStorage: <T>(data: T, key: string) => {

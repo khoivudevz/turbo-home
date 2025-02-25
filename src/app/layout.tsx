@@ -23,7 +23,7 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
 			>
-				<AppProvider initLanguage={true}>
+				<AppProvider>
 					{children}
 					<Dock />
 				</AppProvider>
