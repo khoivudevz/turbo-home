@@ -69,7 +69,9 @@ const NextjsTailwindPage = () => {
 					<li className='mt-1'>Install command:</li>
 				</ol>
 				<pre className='bg-[#151b23] rounded p-4 my-4 overflow-auto text-sm'>
-					<code className='hljs text-white'>npx turbo-setup</code>
+					<code className='hljs text-white'>
+						npx turbo-setup nextjs-tailwind
+					</code>
 				</pre>
 				<ol className='list-decimal ml-6 mt-2 text-white' start={2}>
 					<li className='mt-1'>Install dependencies:</li>
