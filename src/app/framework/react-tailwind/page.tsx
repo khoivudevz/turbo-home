@@ -177,7 +177,9 @@ const ReactTailwindPage = () => {
 					Install command
 				</h1>
 				<pre className='bg-[#151b23] rounded p-4 my-4 overflow-auto text-sm'>
-					<code className='hljs text-white'>npx turbo-setup</code>
+					<code className='hljs text-white'>
+						npx turbo-setup react-tailwind
+					</code>
 				</pre>
 				<h1
 					id='install-dependencies'
