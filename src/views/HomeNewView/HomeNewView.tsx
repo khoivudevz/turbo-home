@@ -2,11 +2,7 @@
 import {FC} from 'react'
 import FullPage from '@/views/HomeNewView/components/FullPage/FullPage'
 
-type Props = {
-	lang: any
-}
-
-const HomeNewView: FC<Props> = ({}) => {
+const HomeNewView: FC = () => {
 	return (
 		<div>
 			<FullPage />

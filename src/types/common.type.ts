@@ -6,6 +6,7 @@ export type FrameworkIcon = {
 	id: string
 	icon: JSX.Element[]
 	title: string
+	path: string
 }
 
 export type Feature = {

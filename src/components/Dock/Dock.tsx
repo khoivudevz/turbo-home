@@ -2,7 +2,7 @@
 
 import {FC} from 'react'
 
-import {frameworkData} from '@/data/frameworks'
+import {frameworkCardData} from '@/data/frameworks'
 import {
 	IconBrandGithub,
 	IconBrandNextjs,
@@ -21,18 +21,18 @@ const Dock: FC = () => {
 			href: '/',
 		},
 		{
-			title: frameworkData[0].title,
+			title: frameworkCardData[0].title,
 			icon: (
 				<IconBrandReact className='h-full w-full text-neutral-500 dark:text-neutral-300' />
 			),
-			href: `/${frameworkData[0].id}`,
+			href: frameworkCardData[0].path,
 		},
 		{
-			title: frameworkData[1].title,
+			title: frameworkCardData[1].title,
 			icon: (
 				<IconBrandNextjs className='h-full w-full text-neutral-500 dark:text-neutral-300' />
 			),
-			href: `/${frameworkData[1].id}`,
+			href: frameworkCardData[1].path,
 		},
 
 		{

@@ -22,7 +22,7 @@ const Frameworks: FC = () => {
 							key={framework.id}
 							title={framework.title}
 							icon={framework.icon}
-							id={framework.id}
+							path={framework.path}
 						/>
 					))}
 				</div>
