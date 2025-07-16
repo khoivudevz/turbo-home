@@ -15,13 +15,16 @@ const NextjsTailwindPage = () => {
 					id='turbo-setup-nextjs---ts---tailwindcss'
 					className='border-b border-[rgba(61,68,77,0.7)] pb-1 text-[#f0f6fc] text-2xl font-bold'
 				>
-					Turbo Setup NextJS - TailwindCSS
+					Turbo Setup: Next.js 15 & TailwindCSS Boilerplate
 				</h1>
 
 				{/* Introduction Paragraph */}
 				<p className='mt-4 text-[#f0f6fc]'>
-					A modern, feature-rich Next.js boilerplate with TailwindCSS, and
-					internationalization support.
+					Kickstart your next project with a cutting-edge, production-ready
+					Next.js 15 boilerplate. Enjoy seamless TypeScript integration, rapid
+					UI development with TailwindCSS, and a suite of modern tools for code
+					quality, state management, and internationalization. Build faster,
+					scale easier, and deliver with confidence.
 				</p>
 
 				{/* Features Section */}
@@ -29,20 +32,61 @@ const NextjsTailwindPage = () => {
 					id='features'
 					className='mt-8 border-b border-[rgba(61,68,77,0.7)] pb-1 text-[#f0f6fc] text-xl font-bold'
 				>
-					Features
+					✨ Features
 				</h2>
 				<ul className='list-disc ml-6 mt-4 text-white'>
-					<li className='mt-2'>🚀 Next.js 15.1.3</li>
-					<li className='mt-2'>📝 TypeScript</li>
-					<li className='mt-2'>🎨 TailwindCSS</li>
-					<li className='mt-2'>🌐 i18n Support (English &amp; Korean)</li>
-					<li className='mt-2'>🔍 ESLint + Prettier</li>
-					<li className='mt-2'>🪝 Husky Git Hooks</li>
-					<li className='mt-2'>🏷️ Conventional Commits</li>
-					<li className='mt-2'>🔄 Environment Configuration</li>
-					<li className='mt-2'>📦 Zustand State Management</li>
-					<li className='mt-2'>🎯 Path Aliases</li>
-					<li className='mt-2'>🔒 Type-Safe API Calls</li>
+					<li className='mt-2'>
+						🚀 <span className='font-bold'>Next.js 15.1.3</span> – Latest
+						Next.js for modern web apps.
+					</li>
+					<li className='mt-2'>
+						📝 <span className='font-bold'>TypeScript</span> – Type-safe coding
+						for reliability.
+					</li>
+					<li className='mt-2'>
+						🎨 <span className='font-bold'>TailwindCSS</span> – Rapid, beautiful
+						UI development.
+					</li>
+					<li className='mt-2'>
+						🌐 <span className='font-bold'>i18n Support</span> – Multilanguage
+						support (English & Korean).
+					</li>
+					<li className='mt-2'>
+						🔍 <span className='font-bold'>ESLint + Prettier</span> – Consistent
+						code style and quality.
+					</li>
+					<li className='mt-2'>
+						🪝 <span className='font-bold'>Husky Git Hooks</span> – Automated
+						checks before every commit.
+					</li>
+					<li className='mt-2'>
+						🏷️ <span className='font-bold'>Conventional Commits</span> –
+						Standardized commit messages.
+					</li>
+					<li className='mt-2'>
+						🔄 <span className='font-bold'>Nuqs</span> – Advanced URL query
+						state management with type safety.
+					</li>
+					<li className='mt-2'>
+						⚡ <span className='font-bold'>SWR</span> – Powerful data fetching
+						with automatic caching and revalidation.
+					</li>
+					<li className='mt-2'>
+						📦 <span className='font-bold'>Zustand State Management</span> –
+						Simple and scalable state management.
+					</li>
+					<li className='mt-2'>
+						🎯 <span className='font-bold'>Path Aliases</span> – Clean and easy
+						imports.
+					</li>
+					<li className='mt-2'>
+						🔒 <span className='font-bold'>Type-Safe API Calls</span> – Secure
+						and robust API integration.
+					</li>
+					<li className='mt-2'>
+						🔄 <span className='font-bold'>Environment Configuration</span> –
+						Multiple environment support.
+					</li>
 				</ul>
 
 				{/* Getting Started Section */}
@@ -50,7 +94,7 @@ const NextjsTailwindPage = () => {
 					id='getting-started'
 					className='mt-8 border-b border-[rgba(61,68,77,0.7)] pb-1 text-[#f0f6fc] text-xl font-bold'
 				>
-					Getting Started
+					🚀 Getting Started
 				</h2>
 				<h3
 					id='prerequisites'
@@ -136,7 +180,7 @@ bun dev`}
 					id='project-structure'
 					className='mt-8 border-b border-[rgba(61,68,77,0.7)] pb-1 text-[#f0f6fc] text-xl font-bold'
 				>
-					Project Structure
+					📁 Project Structure
 				</h2>
 				<pre className='bg-[#151b23] rounded p-4 my-4 overflow-auto text-sm'>
 					<code className='hljs text-white'>
@@ -163,14 +207,9 @@ src/
 					id='internationalization'
 					className='mt-8 border-b border-[rgba(61,68,77,0.7)] pb-1 text-[#f0f6fc] text-xl font-bold'
 				>
-					Internationalization
+					🌐 Internationalization
 				</h2>
-				<h2
-					id='internationalization-1'
-					className='mt-4 border-b border-[rgba(61,68,77,0.7)] pb-1 text-[#f0f6fc] text-xl font-bold'
-				>
-					Internationalization
-				</h2>
+
 				<p className='mt-2 text-[#f0f6fc]'>
 					The project uses{' '}
 					<code className='bg-[#151b23] rounded px-1'>next-intl</code> for
@@ -284,7 +323,7 @@ const Component = () => {
 					id='git-hooks'
 					className='mt-8 border-b border-[rgba(61,68,77,0.7)] pb-1 text-[#f0f6fc] text-xl font-bold'
 				>
-					Git Hooks
+					🪝 Git Hooks
 				</h2>
 				<p className='mt-2 text-[#f0f6fc]'>
 					This project uses Husky for Git hooks:
@@ -303,7 +342,7 @@ const Component = () => {
 					id='environment-variables'
 					className='mt-8 border-b border-[rgba(61,68,77,0.7)] pb-1 text-[#f0f6fc] text-xl font-bold'
 				>
-					Environment Variables
+					⚙️ Environment Variables
 				</h2>
 				<p className='mt-2 text-[#f0f6fc]'>
 					The project supports multiple environments:

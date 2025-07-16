@@ -16,13 +16,16 @@ const ReactTailwindPage = () => {
 					id='turbo-setup-react--typescript--tailwind'
 					className='border-b border-[rgba(61,68,77,0.7)] pb-1 text-[#f0f6fc] text-2xl font-bold'
 				>
-					React + TypeScript + Tailwind
+					Turbo Setup: React 19, TypeScript & TailwindCSS Boilerplate
 				</h1>
 
 				{/* Introduction Paragraph */}
 				<p className='mt-4 text-[#f0f6fc]'>
-					A modern and efficient React starter template with TypeScript,
-					Tailwind CSS, and various development tools pre-configured.
+					Launch your next React project with a robust, production-ready starter
+					powered by React 19, TypeScript, and TailwindCSS. Enjoy rapid UI
+					development, type safety, and a suite of modern tools for code
+					quality, state management, and productivity. Build smarter, ship
+					faster, and scale with confidence.
 				</p>
 
 				{/* Features Section */}
@@ -34,120 +37,47 @@ const ReactTailwindPage = () => {
 				</h2>
 				<ul className='list-disc ml-6 mt-4 text-white'>
 					<li className='mt-2'>
-						⚡️{' '}
-						<a
-							href='https://react.dev/'
-							className='text-blue-500 hover:underline'
-						>
-							React 19
-						</a>{' '}
-						with{' '}
-						<a
-							href='https://www.typescriptlang.org/'
-							className='text-blue-500 hover:underline'
-						>
-							TypeScript
-						</a>
+						<b>⚛️ React 19 + TypeScript</b> - Modern React with full TypeScript
+						support.
 					</li>
 					<li className='mt-2'>
-						🎨{' '}
-						<a
-							href='https://tailwindcss.com/'
-							className='text-blue-500 hover:underline'
-						>
-							Tailwind CSS
-						</a>{' '}
-						for styling
+						<b>🎨 Tailwind CSS</b> - Utility-first CSS for rapid UI development.
 					</li>
 					<li className='mt-2'>
-						📦{' '}
-						<a
-							href='https://vitejs.dev/'
-							className='text-blue-500 hover:underline'
-						>
-							Vite
-						</a>{' '}
-						for fast development and building
+						<b>⚡ Vite</b> - Next-generation frontend tooling for fast builds.
 					</li>
 					<li className='mt-2'>
-						🔍{' '}
-						<a
-							href='https://eslint.org/'
-							className='text-blue-500 hover:underline'
-						>
-							ESLint
-						</a>{' '}
-						for code linting
+						<b>🔍 ESLint</b> - Code linting for consistent code quality.
 					</li>
 					<li className='mt-2'>
-						💅{' '}
-						<a
-							href='https://prettier.io/'
-							className='text-blue-500 hover:underline'
-						>
-							Prettier
-						</a>{' '}
-						for code formatting
+						<b>🧹 Prettier</b> - Automated code formatting for style
+						consistency.
 					</li>
 					<li className='mt-2'>
-						🐶{' '}
-						<a
-							href='https://typicode.github.io/husky/'
-							className='text-blue-500 hover:underline'
-						>
-							Husky
-						</a>{' '}
-						for Git hooks
+						<b>🪝 Husky & lint-staged</b> - Pre-commit hooks for linting and
+						formatting your code.
 					</li>
 					<li className='mt-2'>
-						📋{' '}
-						<a
-							href='https://commitlint.js.org/'
-							className='text-blue-500 hover:underline'
-						>
-							Commitlint
-						</a>{' '}
-						for conventional commits
+						<b>🏷️ Commitlint</b> - Enforces conventional commit messages.
 					</li>
 					<li className='mt-2'>
-						🏪{' '}
-						<a
-							href='https://zustand-demo.pmnd.rs/'
-							className='text-blue-500 hover:underline'
-						>
-							Zustand
-						</a>{' '}
-						for state management
+						<b>📦 Zustand</b> - Simple and fast state management.
 					</li>
 					<li className='mt-2'>
-						🌐{' '}
-						<a
-							href='https://reactrouter.com/'
-							className='text-blue-500 hover:underline'
-						>
-							React Router
-						</a>{' '}
-						for routing
+						<b>🗺️ React Router</b> - Declarative routing for React apps.
 					</li>
 					<li className='mt-2'>
-						📅{' '}
-						<a
-							href='https://day.js.org/'
-							className='text-blue-500 hover:underline'
-						>
-							Day.js
-						</a>{' '}
-						for date manipulation
+						<b>📅 Day.js</b> - Lightweight date manipulation library.
 					</li>
 					<li className='mt-2'>
-						🔄{' '}
-						<a
-							href='https://axios-http.com/'
-							className='text-blue-500 hover:underline'
-						>
-							Axios
-						</a>{' '}
-						for HTTP requests
+						<b>🌐 Axios</b> - Promise-based HTTP client for the browser.
+					</li>
+					<li className='mt-2'>
+						<b>🔄 SWR</b> - React Hooks library for data fetching with caching
+						and revalidation.
+					</li>
+					<li className='mt-2'>
+						<b>🔗 nuqs</b> - Type-safe URL state management with React hooks.
 					</li>
 				</ul>
 
