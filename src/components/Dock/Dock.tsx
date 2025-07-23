@@ -9,6 +9,7 @@ import {
 	IconBrandReact,
 	IconHome,
 } from '@tabler/icons-react'
+import {SiTauri} from 'react-icons/si'
 import {FloatingDock} from '../ui/FloatingDock'
 
 const Dock: FC = () => {
@@ -34,7 +35,13 @@ const Dock: FC = () => {
 			),
 			href: frameworkCardData[1].path,
 		},
-
+		{
+			title: frameworkCardData[2].title,
+			icon: (
+				<SiTauri className='h-full w-full text-neutral-500 dark:text-neutral-300' />
+			),
+			href: frameworkCardData[2].path,
+		},
 		{
 			title: 'GitHub',
 			icon: (

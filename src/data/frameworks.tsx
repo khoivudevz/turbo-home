@@ -10,12 +10,15 @@ import {
 	SiReactrouter,
 	SiVite,
 	SiTypescript,
+	SiTauri,
+	SiSwr,
 } from 'react-icons/si'
 import {IoIosMore} from 'react-icons/io'
 
 export const frameworkId = {
 	reactTypescriptTailwind: 'react-typescript-tailwind',
 	nextjsTypescriptTailwind: 'nextjs-typescript-tailwind',
+	tauriReactTypescriptTailwind: 'tauri-react-typescript-tailwind',
 }
 
 export const frameworkCardData: FrameworkIcon[] = [
@@ -49,5 +52,22 @@ export const frameworkCardData: FrameworkIcon[] = [
 		],
 		title: 'Next.js 15 & TailwindCSS and more...',
 		path: '/framework/nextjs-tailwind',
+	},
+	{
+		id: frameworkId.tauriReactTypescriptTailwind,
+		icon: [
+			<SiTauri key='tauri' />,
+			<FaReact key='react' />,
+			<SiVite key='vite' />,
+			<RiTailwindCssFill key='tailwind' />,
+			<SiTypescript key='typescript' />,
+			<SiEslint key='eslint' />,
+			<SiPrettier key='prettier' />,
+			<SiReactrouter key='router' />,
+			<SiSwr key='swr' />,
+			<IoIosMore key='more' />,
+		],
+		title: 'Tauri + React 19, TypeScript & TailwindCSS and more...',
+		path: '/framework/tauri-react-tailwind',
 	},
 ]
