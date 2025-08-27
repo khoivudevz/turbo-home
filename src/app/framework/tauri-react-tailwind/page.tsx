@@ -79,6 +79,9 @@ const TauriReactTailwindPage = () => {
 						<b>🖥️ Tauri</b> - Cross-platform desktop applications with native
 						performance.
 					</li>
+					<li className='mt-2'>
+						<b>🔐 UseAuth</b> - Authentication and authorization.
+					</li>
 				</ul>
 
 				{/* Prerequisites Section */}

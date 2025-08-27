@@ -84,8 +84,13 @@ const NextjsTailwindPage = () => {
 						and robust API integration.
 					</li>
 					<li className='mt-2'>
-						🔄 <span className='font-bold'>Environment Configuration</span> –
-						Multiple environment support.
+						🔐 <span className='font-bold'>Enhanced Cookie Management</span> –
+						with client/server separation.
+					</li>
+					<li className='mt-2'>
+						🛡️{' '}
+						<span className='font-bold'>Middleware-based Authentication</span> –
+						for route protection.
 					</li>
 				</ul>
 
