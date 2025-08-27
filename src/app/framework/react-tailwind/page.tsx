@@ -79,6 +79,9 @@ const ReactTailwindPage = () => {
 					<li className='mt-2'>
 						<b>🔗 nuqs</b> - Type-safe URL state management with React hooks.
 					</li>
+					<li className='mt-2'>
+						<b>🔐 UseAuth</b> - Authentication and authorization.
+					</li>
 				</ul>
 
 				{/* Prerequisites Section */}
