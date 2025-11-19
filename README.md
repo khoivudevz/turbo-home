@@ -4,9 +4,10 @@ A modern, feature-rich Next.js boilerplate with TypeScript, TailwindCSS, and int
 
 ## Features
 
-- 🚀 Next.js 15.1.3
+- 🚀 Next.js 16.0.3
+- ⚛️ **React Compiler** enabled for automatic optimization
 - 📝 TypeScript
-- 🎨 TailwindCSS
+- 🎨 TailwindCSS v4
 - 🌐 i18n Support (English & Korean)
 - 🔍 ESLint + Prettier
 - 🪝 Husky Git Hooks
@@ -15,6 +16,10 @@ A modern, feature-rich Next.js boilerplate with TypeScript, TailwindCSS, and int
 - 📦 Zustand State Management
 - 🎯 Path Aliases
 - 🔒 Type-Safe API Calls
+- 🔄 **Nuqs** for URL query state management
+- ⚡ **Custom useFetch hook** for data fetching
+- 🔐 **Enhanced Cookie Management** with client/server separation
+- 🛡️ **Middleware-based Authentication** for route protection
 
 ## Getting Started
 

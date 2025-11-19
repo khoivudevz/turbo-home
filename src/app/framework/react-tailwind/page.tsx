@@ -16,7 +16,8 @@ const ReactTailwindPage = () => {
 					id='turbo-setup-react--typescript--tailwind'
 					className='border-b border-[rgba(61,68,77,0.7)] pb-1 text-[#f0f6fc] text-2xl font-bold'
 				>
-					Turbo Setup: React 19, TypeScript & TailwindCSS Boilerplate
+					Turbo Setup: React 19 + React Compiler, TypeScript & TailwindCSS
+					Boilerplate
 				</h1>
 
 				{/* Introduction Paragraph */}
@@ -41,7 +42,12 @@ const ReactTailwindPage = () => {
 						support.
 					</li>
 					<li className='mt-2'>
-						<b>🎨 Tailwind CSS</b> - Utility-first CSS for rapid UI development.
+						<b>⚛️ React Compiler</b> - Automatic optimization via Babel plugin
+						for better performance.
+					</li>
+					<li className='mt-2'>
+						<b>🎨 Tailwind CSS v4</b> - Utility-first CSS for rapid UI
+						development.
 					</li>
 					<li className='mt-2'>
 						<b>⚡ Vite</b> - Next-generation frontend tooling for fast builds.
@@ -73,14 +79,14 @@ const ReactTailwindPage = () => {
 						<b>🌐 Axios</b> - Promise-based HTTP client for the browser.
 					</li>
 					<li className='mt-2'>
-						<b>🔄 SWR</b> - React Hooks library for data fetching with caching
-						and revalidation.
+						<b>🔄 Custom useFetch Hook</b> - Lightweight data fetching with
+						loading and error states.
 					</li>
 					<li className='mt-2'>
 						<b>🔗 nuqs</b> - Type-safe URL state management with React hooks.
 					</li>
 					<li className='mt-2'>
-						<b>🔐 UseAuth</b> - Authentication and authorization.
+						<b>🌍 i18next</b> - Internationalization support (English & Korean).
 					</li>
 				</ul>
 
@@ -140,21 +146,16 @@ const ReactTailwindPage = () => {
 					Start development server
 				</h1>
 				<pre className='bg-[#151b23] rounded p-4 my-4 overflow-auto text-sm'>
-					<code className='hljs text-white'>
-						bun dev # Development mode{'\n'}
-						bun dev:stg # Staging mode{'\n'}
-						bun dev:prod # Production mode
-					</code>
+					<code className='hljs text-white'>bun run dev</code>
 				</pre>
-				<h1 id='start-development-server-1' className='mt-4 text-[#f0f6fc]'>
-					Start development server
+				<h1
+					id='build-command'
+					className='mt-4 text-[#f0f6fc] text-lg font-bold'
+				>
+					Build command
 				</h1>
 				<pre className='bg-[#151b23] rounded p-4 my-4 overflow-auto text-sm'>
-					<code className='hljs text-white'>
-						bun build # Production build{'\n'}
-						bun build:stg # Staging build{'\n'}
-						bun build:dev # Development build
-					</code>
+					<code className='hljs text-white'>bun run build</code>
 				</pre>
 
 				{/* Development Structure */}
@@ -240,6 +241,35 @@ const ReactTailwindPage = () => {
 					</li>
 					<li className='mt-2'>Pre-commit hooks ensure code quality</li>
 				</ul>
+				<h3
+					id='react-compiler'
+					className='mt-4 text-[#f0f6fc] text-lg font-bold'
+				>
+					React Compiler
+				</h3>
+				<p className='mt-2 text-[#f0f6fc]'>
+					The project uses React Compiler via{' '}
+					<code className='bg-[#151b23] rounded px-1'>
+						babel-plugin-react-compiler
+					</code>{' '}
+					for automatic optimization of React components. The compiler is
+					configured in{' '}
+					<code className='bg-[#151b23] rounded px-1'>vite.config.ts</code>{' '}
+					using{' '}
+					<code className='bg-[#151b23] rounded px-1'>
+						@vitejs/plugin-react
+					</code>{' '}
+					(Babel-based) to support Babel plugins.
+				</p>
+				<p className='mt-2 text-[#f0f6fc]'>
+					The compiler automatically optimizes your React code during the build
+					process, analyzing components and hooks to determine when memoization
+					is beneficial, eliminating the need for manual{' '}
+					<code className='bg-[#151b23] rounded px-1'>useMemo</code>,{' '}
+					<code className='bg-[#151b23] rounded px-1'>useCallback</code>, and{' '}
+					<code className='bg-[#151b23] rounded px-1'>React.memo</code> in most
+					cases.
+				</p>
 
 				{/* Internationalization Section */}
 				<h2
