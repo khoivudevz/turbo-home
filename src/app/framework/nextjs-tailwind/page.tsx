@@ -15,16 +15,17 @@ const NextjsTailwindPage = () => {
 					id='turbo-setup-nextjs---ts---tailwindcss'
 					className='border-b border-[rgba(61,68,77,0.7)] pb-1 text-[#f0f6fc] text-2xl font-bold'
 				>
-					Turbo Setup: Next.js 15 & TailwindCSS Boilerplate
+					Turbo Setup: Next.js 16 + React Compiler & TailwindCSS Boilerplate
 				</h1>
 
 				{/* Introduction Paragraph */}
 				<p className='mt-4 text-[#f0f6fc]'>
 					Kickstart your next project with a cutting-edge, production-ready
-					Next.js 15 boilerplate. Enjoy seamless TypeScript integration, rapid
-					UI development with TailwindCSS, and a suite of modern tools for code
-					quality, state management, and internationalization. Build faster,
-					scale easier, and deliver with confidence.
+					Next.js 16 boilerplate with React Compiler enabled. Enjoy seamless
+					TypeScript integration, rapid UI development with TailwindCSS v4, and
+					a suite of modern tools for code quality, state management, and
+					internationalization. Build faster, scale easier, and deliver with
+					confidence.
 				</p>
 
 				{/* Features Section */}
@@ -36,20 +37,24 @@ const NextjsTailwindPage = () => {
 				</h2>
 				<ul className='list-disc ml-6 mt-4 text-white'>
 					<li className='mt-2'>
-						🚀 <span className='font-bold'>Next.js 15.1.3</span> – Latest
+						🚀 <span className='font-bold'>Next.js 16.0.3</span> – Latest
 						Next.js for modern web apps.
+					</li>
+					<li className='mt-2'>
+						⚛️ <span className='font-bold'>React Compiler</span> – Automatic
+						optimization enabled natively in Next.js 16.
 					</li>
 					<li className='mt-2'>
 						📝 <span className='font-bold'>TypeScript</span> – Type-safe coding
 						for reliability.
 					</li>
 					<li className='mt-2'>
-						🎨 <span className='font-bold'>TailwindCSS</span> – Rapid, beautiful
-						UI development.
+						🎨 <span className='font-bold'>TailwindCSS v4</span> – Rapid,
+						beautiful UI development.
 					</li>
 					<li className='mt-2'>
 						🌐 <span className='font-bold'>i18n Support</span> – Multilanguage
-						support (English & Korean).
+						support (English & Korean) with next-intl.
 					</li>
 					<li className='mt-2'>
 						🔍 <span className='font-bold'>ESLint + Prettier</span> – Consistent
@@ -68,8 +73,8 @@ const NextjsTailwindPage = () => {
 						state management with type safety.
 					</li>
 					<li className='mt-2'>
-						⚡ <span className='font-bold'>SWR</span> – Powerful data fetching
-						with automatic caching and revalidation.
+						⚡ <span className='font-bold'>Custom useFetch Hook</span> –
+						Lightweight data fetching with loading and error states.
 					</li>
 					<li className='mt-2'>
 						📦 <span className='font-bold'>Zustand State Management</span> –
@@ -91,6 +96,10 @@ const NextjsTailwindPage = () => {
 						🛡️{' '}
 						<span className='font-bold'>Middleware-based Authentication</span> –
 						for route protection.
+					</li>
+					<li className='mt-2'>
+						📁 <span className='font-bold'>Snake-case File Naming</span> –
+						Consistent file organization convention.
 					</li>
 				</ul>
 
@@ -129,13 +138,16 @@ const NextjsTailwindPage = () => {
 					<code className='hljs text-white'>bun install</code>
 				</pre>
 				<ol className='list-decimal ml-6 mt-2 text-white' start={3}>
-					<li className='mt-1'>Create environment files:</li>
+					<li className='mt-1'>Set up environment variables:</li>
 				</ol>
 				<pre className='bg-[#151b23] rounded p-4 my-4 overflow-auto text-sm'>
 					<code className='hljs text-white'>
-						{`cp .env.example .env.dev
-cp .env.example .env.staging
-cp .env.example .env.prod`}
+						{`# Copy the example environment file
+cp .env.example .env.local
+
+# Edit the environment variables
+# NEXT_PUBLIC_ENV=development
+# NEXT_PUBLIC_API_URL=https://your-api-url.com`}
 					</code>
 				</pre>
 
@@ -147,13 +159,7 @@ cp .env.example .env.prod`}
 				<pre className='bg-[#151b23] rounded p-4 my-4 overflow-auto text-sm'>
 					<code className='hljs text-white'>
 						{`# Development
-bun run dev
-
-# Staging
-bun run dev:staging
-
-# Production
-bun run dev:prod`}
+bun run dev`}
 					</code>
 				</pre>
 				<p className='mt-2 text-[#f0f6fc]'>
@@ -169,14 +175,8 @@ bun run dev:prod`}
 				</h3>
 				<pre className='bg-[#151b23] rounded p-4 my-4 overflow-auto text-sm'>
 					<code className='hljs text-white'>
-						{`# Development
-bun run build:dev
-
-# Staging
-bun run build:staging
-
-# Production
-bun dev`}
+						{`# Production build
+bun run build`}
 					</code>
 				</pre>
 
@@ -360,10 +360,28 @@ const Component = () => {
 				<p className='mt-2 text-[#f0f6fc]'>Required environment variables:</p>
 				<pre className='bg-[#151b23] rounded p-4 my-4 overflow-auto text-sm'>
 					<code className='hljs text-white'>
-						{`NEXT_PUBLIC_ENV=
-NEXT_PUBLIC_USER_API_URL=`}
+						{`NEXT_PUBLIC_ENV=development
+NEXT_PUBLIC_USER_API_URL=https://your-api-url.com
+NEXT_PUBLIC_API_URL=https://your-api-url.com`}
 					</code>
 				</pre>
+				<h3
+					id='react-compiler'
+					className='mt-4 text-[#f0f6fc] text-lg font-bold'
+				>
+					React Compiler
+				</h3>
+				<p className='mt-2 text-[#f0f6fc]'>
+					The project uses React Compiler for automatic optimization of React
+					components. The compiler is enabled in{' '}
+					<code className='bg-[#151b23] rounded px-1'>next.config.ts</code> with{' '}
+					<code className='bg-[#151b23] rounded px-1'>reactCompiler: true</code>
+					.
+				</p>
+				<p className='mt-2 text-[#f0f6fc]'>
+					Benefits include automatic memoization, performance optimization, and
+					zero configuration - Next.js 16 handles it natively.
+				</p>
 			</div>
 		</main>
 	)

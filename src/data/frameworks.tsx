@@ -36,7 +36,7 @@ export const frameworkCardData: FrameworkIcon[] = [
 			<SiCommitlint key='commitlint' />,
 			<IoIosMore key='more' />,
 		],
-		title: 'React 19, TypeScript & TailwindCSS and more...',
+		title: 'React 19 + React Compiler, TypeScript & TailwindCSS and more...',
 		path: '/framework/react-tailwind',
 	},
 	{
@@ -50,7 +50,7 @@ export const frameworkCardData: FrameworkIcon[] = [
 			<SiCommitlint key='commitlint' />,
 			<IoIosMore key='more' />,
 		],
-		title: 'Next.js 15 & TailwindCSS and more...',
+		title: 'Next.js 16 + React Compiler & TailwindCSS and more...',
 		path: '/framework/nextjs-tailwind',
 	},
 	{
