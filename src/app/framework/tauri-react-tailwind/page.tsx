@@ -15,16 +15,17 @@ const TauriReactTailwindPage = () => {
 					id='turbo-setup-tauri-react-typescript-tailwind'
 					className='border-b border-[rgba(61,68,77,0.7)] pb-1 text-[#f0f6fc] text-2xl font-bold'
 				>
-					Turbo Setup: Tauri + React 19, TypeScript & TailwindCSS Boilerplate
+					Turbo Setup: Tauri + React 19.2.1, TypeScript & TailwindCSS
+					Boilerplate
 				</h1>
 
 				{/* Introduction Paragraph */}
 				<p className='mt-4 text-[#f0f6fc]'>
 					Build powerful cross-platform desktop applications with a modern Tauri
-					starter powered by React 19, TypeScript, and TailwindCSS. Enjoy native
-					performance, small bundle sizes, and seamless integration between Rust
-					backend and React frontend. Create once, deploy everywhere with
-					confidence.
+					starter powered by React 19.2.1, TypeScript, and TailwindCSS. Enjoy
+					native performance, small bundle sizes, and seamless integration
+					between Rust backend and React frontend. Create once, deploy
+					everywhere with confidence.
 				</p>
 
 				{/* Features Section */}
@@ -36,8 +37,8 @@ const TauriReactTailwindPage = () => {
 				</h2>
 				<ul className='list-disc ml-6 mt-4 text-white'>
 					<li className='mt-2'>
-						<b>⚛️ React 19 + TypeScript</b> - Modern React with full TypeScript
-						support.
+						<b>⚛️ React 19.2.1 + TypeScript</b> - Modern React with full
+						TypeScript support.
 					</li>
 					<li className='mt-2'>
 						<b>🎨 Tailwind CSS</b> - Utility-first CSS for rapid UI development.
@@ -72,8 +73,8 @@ const TauriReactTailwindPage = () => {
 						<b>🌐 Axios</b> - Promise-based HTTP client for the browser.
 					</li>
 					<li className='mt-2'>
-						<b>🔄 SWR</b> - React Hooks library for data fetching with caching
-						and revalidation.
+						<b>🔄 Custom useFetch Hook</b> - Lightweight data fetching with
+						loading and error states (replaces SWR).
 					</li>
 					<li className='mt-2'>
 						<b>🖥️ Tauri</b> - Cross-platform desktop applications with native
@@ -375,37 +376,43 @@ const HomeView = () => {
 					📡 Data Fetching
 				</h2>
 				<p className='mt-2 text-[#f0f6fc]'>
-					This project uses{' '}
-					<code className='bg-[#151b23] rounded px-1'>SWR</code> for data
-					fetching, which provides features like:
+					This project uses a{' '}
+					<code className='bg-[#151b23] rounded px-1'>
+						Custom useFetch Hook
+					</code>{' '}
+					for data fetching, which provides features like:
 				</p>
 				<ul className='list-disc ml-6 mt-2 text-white'>
-					<li className='mt-1'>Automatic caching and revalidation</li>
-					<li className='mt-1'>Real-time experience</li>
-					<li className='mt-1'>Request deduplication</li>
+					<li className='mt-1'>Automatic data fetching</li>
+					<li className='mt-1'>Loading and error states</li>
+					<li className='mt-1'>Manual execution control</li>
+					<li className='mt-1'>Success/error callbacks</li>
 					<li className='mt-1'>TypeScript ready</li>
-					<li className='mt-1'>Suspense mode support</li>
+					<li className='mt-1'>No external dependencies</li>
 				</ul>
 
-				<h3 className='mt-4 text-[#f0f6fc] text-lg font-bold'>useNews Hook</h3>
-				<p className='mt-2 text-[#f0f6fc]'>
-					A custom hook for fetching news data:
-				</p>
+				<h3 className='mt-4 text-[#f0f6fc] text-lg font-bold'>
+					useFetch Hook Example
+				</h3>
+				<p className='mt-2 text-[#f0f6fc]'>Using the custom useFetch hook:</p>
 				<pre className='bg-[#151b23] rounded p-4 my-4 overflow-auto text-sm'>
 					<code className='hljs text-white'>
-						{`import useNews from '@/hooks/useNews'
+						{`import {useFetch} from '@/hooks/use-fetch'
 
 const MyComponent = () => {
-  const { news, isLoading, error } = useNews()
+  const {data, isLoading, error, execute, reset} = useFetch(() =>
+    fetch('/api/news').then(res => res.json())
+  )
 
   if (isLoading) return <div>Loading...</div>
-  if (error) return <div>Error loading news</div>
+  if (error) return <div>Error loading data</div>
 
   return (
     <div>
-      {news?.map(item => (
-        <div key={item.ticker}>{item.name}</div>
+      {data?.map(item => (
+        <div key={item.id}>{item.name}</div>
       ))}
+      <button onClick={execute}>Refresh</button>
     </div>
   )
 }`}
