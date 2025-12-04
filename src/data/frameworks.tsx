@@ -1,19 +1,17 @@
 import {FrameworkIcon} from '@/types/common.type'
 import {FaReact} from 'react-icons/fa'
-import {RiNextjsFill} from 'react-icons/ri'
-import {RiTailwindCssFill} from 'react-icons/ri'
+import {IoIosMore} from 'react-icons/io'
+import {RiNextjsFill, RiTailwindCssFill} from 'react-icons/ri'
 import {
 	SiAxios,
 	SiCommitlint,
 	SiEslint,
 	SiPrettier,
 	SiReactrouter,
-	SiVite,
-	SiTypescript,
 	SiTauri,
-	SiSwr,
+	SiTypescript,
+	SiVite,
 } from 'react-icons/si'
-import {IoIosMore} from 'react-icons/io'
 
 export const frameworkId = {
 	reactTypescriptTailwind: 'react-typescript-tailwind',
@@ -36,7 +34,8 @@ export const frameworkCardData: FrameworkIcon[] = [
 			<SiCommitlint key='commitlint' />,
 			<IoIosMore key='more' />,
 		],
-		title: 'React 19 + React Compiler, TypeScript & TailwindCSS and more...',
+		title:
+			'React 19.2.1 + React Compiler, TypeScript & TailwindCSS v4 and more...',
 		path: '/framework/react-tailwind',
 	},
 	{
@@ -50,7 +49,7 @@ export const frameworkCardData: FrameworkIcon[] = [
 			<SiCommitlint key='commitlint' />,
 			<IoIosMore key='more' />,
 		],
-		title: 'Next.js 16 + React Compiler & TailwindCSS and more...',
+		title: 'Next.js 16.0.7 + React Compiler & TailwindCSS v4 and more...',
 		path: '/framework/nextjs-tailwind',
 	},
 	{
@@ -64,10 +63,10 @@ export const frameworkCardData: FrameworkIcon[] = [
 			<SiEslint key='eslint' />,
 			<SiPrettier key='prettier' />,
 			<SiReactrouter key='router' />,
-			<SiSwr key='swr' />,
+			<SiAxios key='axios' />,
 			<IoIosMore key='more' />,
 		],
-		title: 'Tauri + React 19, TypeScript & TailwindCSS and more...',
+		title: 'Tauri + React 19.2.1, TypeScript & TailwindCSS and more...',
 		path: '/framework/tauri-react-tailwind',
 	},
 ]

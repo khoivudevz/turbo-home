@@ -16,15 +16,15 @@ const ReactTailwindPage = () => {
 					id='turbo-setup-react--typescript--tailwind'
 					className='border-b border-[rgba(61,68,77,0.7)] pb-1 text-[#f0f6fc] text-2xl font-bold'
 				>
-					Turbo Setup: React 19 + React Compiler, TypeScript & TailwindCSS
-					Boilerplate
+					Turbo Setup: React 19.2.1 + React Compiler, TypeScript & TailwindCSS
+					v4 Boilerplate
 				</h1>
 
 				{/* Introduction Paragraph */}
 				<p className='mt-4 text-[#f0f6fc]'>
 					Launch your next React project with a robust, production-ready starter
-					powered by React 19, TypeScript, and TailwindCSS. Enjoy rapid UI
-					development, type safety, and a suite of modern tools for code
+					powered by React 19.2.1, TypeScript, and TailwindCSS v4. Enjoy rapid
+					UI development, type safety, and a suite of modern tools for code
 					quality, state management, and productivity. Build smarter, ship
 					faster, and scale with confidence.
 				</p>
@@ -38,8 +38,8 @@ const ReactTailwindPage = () => {
 				</h2>
 				<ul className='list-disc ml-6 mt-4 text-white'>
 					<li className='mt-2'>
-						<b>⚛️ React 19 + TypeScript</b> - Modern React with full TypeScript
-						support.
+						<b>⚛️ React 19.2.1 + TypeScript</b> - Modern React with full
+						TypeScript support.
 					</li>
 					<li className='mt-2'>
 						<b>⚛️ React Compiler</b> - Automatic optimization via Babel plugin
@@ -50,7 +50,8 @@ const ReactTailwindPage = () => {
 						development.
 					</li>
 					<li className='mt-2'>
-						<b>⚡ Vite</b> - Next-generation frontend tooling for fast builds.
+						<b>⚡ Vite 7.2.6</b> - Next-generation frontend tooling for fast
+						builds.
 					</li>
 					<li className='mt-2'>
 						<b>🔍 ESLint</b> - Code linting for consistent code quality.
@@ -80,7 +81,7 @@ const ReactTailwindPage = () => {
 					</li>
 					<li className='mt-2'>
 						<b>🔄 Custom useFetch Hook</b> - Lightweight data fetching with
-						loading and error states.
+						loading and error states (replaces SWR).
 					</li>
 					<li className='mt-2'>
 						<b>🔗 nuqs</b> - Type-safe URL state management with React hooks.
@@ -146,7 +147,11 @@ const ReactTailwindPage = () => {
 					Start development server
 				</h1>
 				<pre className='bg-[#151b23] rounded p-4 my-4 overflow-auto text-sm'>
-					<code className='hljs text-white'>bun run dev</code>
+					<code className='hljs text-white'>
+						{`bun run dev
+
+# The application will be available at http://localhost:8000`}
+					</code>
 				</pre>
 				<h1
 					id='build-command'
@@ -155,7 +160,12 @@ const ReactTailwindPage = () => {
 					Build command
 				</h1>
 				<pre className='bg-[#151b23] rounded p-4 my-4 overflow-auto text-sm'>
-					<code className='hljs text-white'>bun run build</code>
+					<code className='hljs text-white'>
+						{`bun run build
+
+# Preview production build
+bun run preview`}
+					</code>
 				</pre>
 
 				{/* Development Structure */}
