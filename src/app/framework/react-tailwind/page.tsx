@@ -16,14 +16,14 @@ const ReactTailwindPage = () => {
 					id='turbo-setup-react--typescript--tailwind'
 					className='border-b border-[rgba(61,68,77,0.7)] pb-1 text-[#f0f6fc] text-2xl font-bold'
 				>
-					Turbo Setup: React 19.2.1 + React Compiler, TypeScript & TailwindCSS
+					Turbo Setup: React 19.2.3 + React Compiler, TypeScript & TailwindCSS
 					v4 Boilerplate
 				</h1>
 
 				{/* Introduction Paragraph */}
 				<p className='mt-4 text-[#f0f6fc]'>
 					Launch your next React project with a robust, production-ready starter
-					powered by React 19.2.1, TypeScript, and TailwindCSS v4. Enjoy rapid
+					powered by React 19.2.3, TypeScript, and TailwindCSS v4. Enjoy rapid
 					UI development, type safety, and a suite of modern tools for code
 					quality, state management, and productivity. Build smarter, ship
 					faster, and scale with confidence.
@@ -38,7 +38,7 @@ const ReactTailwindPage = () => {
 				</h2>
 				<ul className='list-disc ml-6 mt-4 text-white'>
 					<li className='mt-2'>
-						<b>⚛️ React 19.2.1 + TypeScript</b> - Modern React with full
+						<b>⚛️ React 19.2.3 + TypeScript</b> - Modern React with full
 						TypeScript support.
 					</li>
 					<li className='mt-2'>
@@ -50,7 +50,7 @@ const ReactTailwindPage = () => {
 						development.
 					</li>
 					<li className='mt-2'>
-						<b>⚡ Vite 7.2.6</b> - Next-generation frontend tooling for fast
+						<b>⚡ Vite 7.2.7</b> - Next-generation frontend tooling for fast
 						builds.
 					</li>
 					<li className='mt-2'>

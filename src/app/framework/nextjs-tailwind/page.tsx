@@ -15,16 +15,17 @@ const NextjsTailwindPage = () => {
 					id='turbo-setup-nextjs---ts---tailwindcss'
 					className='border-b border-[rgba(61,68,77,0.7)] pb-1 text-[#f0f6fc] text-2xl font-bold'
 				>
-					Turbo Setup: Next.js 16.0.7 + React Compiler & TailwindCSS Boilerplate
+					Turbo Setup: Next.js 16.0.10 + React Compiler & TailwindCSS
+					Boilerplate
 				</h1>
 
 				{/* Introduction Paragraph */}
 				<p className='mt-4 text-[#f0f6fc]'>
 					Kickstart your next project with a cutting-edge, production-ready
-					Next.js 16.0.7 boilerplate with React Compiler enabled. Enjoy seamless
-					TypeScript integration, rapid UI development with TailwindCSS v4, and
-					a suite of modern tools for code quality, state management, and
-					internationalization. Build faster, scale easier, and deliver with
+					Next.js 16.0.10 boilerplate with React Compiler enabled. Enjoy
+					seamless TypeScript integration, rapid UI development with TailwindCSS
+					v4, and a suite of modern tools for code quality, state management,
+					and internationalization. Build faster, scale easier, and deliver with
 					confidence.
 				</p>
 
@@ -37,7 +38,7 @@ const NextjsTailwindPage = () => {
 				</h2>
 				<ul className='list-disc ml-6 mt-4 text-white'>
 					<li className='mt-2'>
-						🚀 <span className='font-bold'>Next.js 16.0.7</span> – Latest
+						🚀 <span className='font-bold'>Next.js 16.0.10</span> – Latest
 						Next.js for modern web apps.
 					</li>
 					<li className='mt-2'>
