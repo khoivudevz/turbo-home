@@ -15,14 +15,14 @@ const TauriReactTailwindPage = () => {
 					id='turbo-setup-tauri-react-typescript-tailwind'
 					className='border-b border-[rgba(61,68,77,0.7)] pb-1 text-[#f0f6fc] text-2xl font-bold'
 				>
-					Turbo Setup: Tauri + React 19.2.1, TypeScript & TailwindCSS
+					Turbo Setup: Tauri + React 19.2.3, TypeScript & TailwindCSS v4
 					Boilerplate
 				</h1>
 
 				{/* Introduction Paragraph */}
 				<p className='mt-4 text-[#f0f6fc]'>
 					Build powerful cross-platform desktop applications with a modern Tauri
-					starter powered by React 19.2.1, TypeScript, and TailwindCSS. Enjoy
+					starter powered by React 19.2.3, TypeScript, and TailwindCSS v4. Enjoy
 					native performance, small bundle sizes, and seamless integration
 					between Rust backend and React frontend. Create once, deploy
 					everywhere with confidence.
@@ -37,11 +37,12 @@ const TauriReactTailwindPage = () => {
 				</h2>
 				<ul className='list-disc ml-6 mt-4 text-white'>
 					<li className='mt-2'>
-						<b>⚛️ React 19.2.1 + TypeScript</b> - Modern React with full
+						<b>⚛️ React 19.2.3 + TypeScript</b> - Modern React with full
 						TypeScript support.
 					</li>
 					<li className='mt-2'>
-						<b>🎨 Tailwind CSS</b> - Utility-first CSS for rapid UI development.
+						<b>🎨 Tailwind CSS v4</b> - Utility-first CSS for rapid UI
+						development.
 					</li>
 					<li className='mt-2'>
 						<b>⚡ Vite</b> - Next-generation frontend tooling for fast builds.

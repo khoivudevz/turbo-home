@@ -35,7 +35,7 @@ export const frameworkCardData: FrameworkIcon[] = [
 			<IoIosMore key='more' />,
 		],
 		title:
-			'React 19.2.1 + React Compiler, TypeScript & TailwindCSS v4 and more...',
+			'React 19.2.3 + React Compiler, TypeScript & TailwindCSS v4 and more...',
 		path: '/framework/react-tailwind',
 	},
 	{
@@ -49,7 +49,7 @@ export const frameworkCardData: FrameworkIcon[] = [
 			<SiCommitlint key='commitlint' />,
 			<IoIosMore key='more' />,
 		],
-		title: 'Next.js 16.0.7 + React Compiler & TailwindCSS v4 and more...',
+		title: 'Next.js 16.0.10 + React Compiler & TailwindCSS v4 and more...',
 		path: '/framework/nextjs-tailwind',
 	},
 	{
@@ -66,7 +66,7 @@ export const frameworkCardData: FrameworkIcon[] = [
 			<SiAxios key='axios' />,
 			<IoIosMore key='more' />,
 		],
-		title: 'Tauri + React 19.2.1, TypeScript & TailwindCSS and more...',
+		title: 'Tauri + React 19.2.3, TypeScript & TailwindCSS v4 and more...',
 		path: '/framework/tauri-react-tailwind',
 	},
 ]
